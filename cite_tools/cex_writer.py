@@ -65,6 +65,27 @@ def generate_catalog_block(catalog_entries):
     )
 
 
+def generate_citable_node(node):
+    """
+    CitableNode struct
+    {
+        "urn": "",
+        "text": "",
+    }
+    """
+    # TODO: Create actual typed nodes
+    return f"{DELIMITER}".join(node.values())
+
+
+def generate_cts_data_block(nodes):
+    return "\n".join(
+        [
+            generate_block_name("ctsdata"),
+            "\n".join([generate_citable_node(node) for node in nodes]),
+        ]
+    )
+
+
 def main():
     print(generate_cex_metadata())
     print()
@@ -81,6 +102,9 @@ def main():
         }
     ]
     print(generate_catalog_block(catalog_entries))
+    print()
+    nodes = [{"urn": "foo", "text": "bar"}]
+    print(generate_cts_data_block(nodes))
 
 
 if __name__ == "__main__":
