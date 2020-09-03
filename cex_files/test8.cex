@@ -1,0 +1,8 @@
+#!imagedata
+
+// Lines are structured as:
+// collection#protocol#base URL
+
+urn:cite2:hmt:vaimg.v1:#CITE image#http://www.homermultitext.org/hmtdigital/images?
+urn:cite2:hmt:vaimg.v1:#IIIF#http://www.homermultitext.org/image2/context.json
+urn:cite2:hmt:vaimg.v1:#localDZ

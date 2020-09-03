@@ -1,0 +1,4 @@
+#!relations
+
+urn:cts:greekLit:tlg0012.tlg001.msA:1.1-1.25#urn:cite2:dse:verbs.v1:appearsOn:#urn:cite2:hmt:msA.v1:12r
+urn:cite2:hmt:msA.v1:12r#urn:cite2:dse:verbs.v1:hasOnit:#urn:cts:greekLit:tlg0012.tlg001.msA:1.1-1.25
