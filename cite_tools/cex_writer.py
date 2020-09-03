@@ -24,3 +24,64 @@ def generate_cex_metadata(name="", urn="", license=""):
             f"license{DELIMITER}{cex_license}",
         ]
     )
+
+
+def generate_catalog_entry(entry):
+    """
+    edu.holycross.shot.ohco2.CatalogEntry struct
+    {
+        "urn": "",
+        "citation_scheme": "",
+        "group_name": "",
+        "work_title": "",
+        "version_label": "",
+        "exemplar_label": "",
+        "online": "",
+        "lang": "",
+    }
+    """
+    # TODO: Create actual typed entries
+    return f"{DELIMITER}".join(entry.values())
+
+
+def generate_catalog_block(catalog_entries):
+    return "\n".join(
+        [
+            generate_block_name("ctscatalog"),
+            f"{DELIMITER}".join(
+                [
+                    "urn",
+                    "citationScheme",
+                    "groupName",
+                    "workTitle",
+                    "versionLabel",
+                    "exemplarLabel",
+                    "online",
+                    "lang",
+                ]
+            ),
+            "\n".join([generate_catalog_entry(entry) for entry in catalog_entries]),
+        ]
+    )
+
+
+def main():
+    print(generate_cex_metadata())
+    print()
+    catalog_entries = [
+        {
+            "urn": "foo",
+            "citation_scheme": "bar",
+            "group_name": "baz",
+            "work_title": "bing",
+            "version_label": "",
+            "exemplar_label": "",
+            "online": "true",
+            "lang": "grc",
+        }
+    ]
+    print(generate_catalog_block(catalog_entries))
+
+
+if __name__ == "__main__":
+    main()
