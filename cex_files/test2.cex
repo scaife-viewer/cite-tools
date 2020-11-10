@@ -1,0 +1,13 @@
+#!citelibrary
+
+// Metadata applying to the entire library.
+// Note that throughout this source, the string "#" is used as
+// the column delimiter.
+
+name#Iliadic Metrical Summaries
+urn#urn:cite2:hmt:cex.2017_1:metsumm
+license#Creative Commons Attribution, Non-Commercial 4.0 License <https://creativecommons.org/licenses/by-nc/4.0/>.
+
+// Optional namespace definitions
+namespace#hmt#http://www.homermultitext.org/citens/hmt
+namespace#greekLit#http://chs.harvard.edu/ctsns/greekLit

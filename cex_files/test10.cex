@@ -1,0 +1,4 @@
+#!datamodels
+
+Collection#Model#Label#Description
+urn:cite2:dse:verbs.v1:#urn:cite2:dse:verbs.v1:#DSE model#Diplomatic Scholarly Edition (DSE) model.  See documentation at <https://github.com/cite-architecture/dse>.
